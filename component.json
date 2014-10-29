@@ -1,0 +1,10 @@
+{
+  "name" : "binom",
+  "description" : "Binomial distribution function",
+  "dependencies" : {
+  },
+  "main" : "index.js",
+  "scripts" : [
+    "index.js"
+  ],
+}
