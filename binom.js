@@ -52,11 +52,18 @@
 
     var confidenceTestResult = confidence.getResult();
 
-    var averageSuccessRate = successesNum /  trialsNum;
-    var minSuccessRate = confidenceTestResult.confidenceInterval.min / 100;
-    var maxSuccessRate = confidenceTestResult.confidenceInterval.max / 100;
+    var averageSuccessRate, minSuccessRate, maxSuccessRate;
     var pValue = getPValue(confidence._zScore);
     var testResult;
+    var error;
+
+    if (confidenceTestResult.hasWinner) {
+      minSuccessRate = confidenceTestResult.confidenceInterval.min / 100;
+      maxSuccessRate = confidenceTestResult.confidenceInterval.max / 100;
+      averageSuccessRate = confidenceTestResult.winnerID == 'B' ? successesNum /  trialsNum : controllDataSuccessesNum / controllDataTrialsNum;
+    } else {
+      error = confidenceTestResult.readable;
+    }
 
     if (( (1 - confidenceRate) / 2 >= pValue ) && ( confidenceTestResult.winnerID == 'B' )) {
       testResult = true;
@@ -69,7 +76,8 @@
       minSuccessRate: minSuccessRate,
       maxSuccessRate: maxSuccessRate,
       pValue: pValue,
-      testResult: testResult
+      testResult: testResult,
+      error: error
     } 
   };
 
