@@ -1,0 +1,16 @@
+{
+  "name" : "binomjs",
+  "description" : "Binomial distribution function in JavaScript",
+  "version": "0.1.0",
+  "dependencies": {
+    "confidencejs": ">= 1.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thii/binomjs.git"
+  },
+  "main" : "binom.js",
+  "engines": {
+    "node": ">= 0.10.0"
+  }
+}
