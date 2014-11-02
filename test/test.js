@@ -9,7 +9,7 @@ module.exports['Test'] = {
 
     var result = binom.test(10000, 9999, 10000, 500, 0.95);
     test.ok(result.averageSuccessRate >= result.minSuccessRate, 'Average success rate should equal to or greater than min success rate');
-    test.ok(result.averageSuccessRate <= result.maxSuccessRate, 'Average success rate should equal to or less than min success rate');
+    test.ok(result.averageSuccessRate <= result.maxSuccessRate, 'Average success rate should equal to or less than max success rate');
     test.equal(result.testResult, true, 'Test result should be true when average success rate falls between min and max success rates');
     test.equal(result.error, null, 'There should be no error');
 
@@ -37,7 +37,7 @@ module.exports['Test'] = {
 
     var result = binom.test(10000, 500, 10000, 9999, 0.95);
     test.ok(result.averageSuccessRate >= result.minSuccessRate, 'Average success rate should equal to or greater than min success rate');
-    test.ok(result.averageSuccessRate <= result.maxSuccessRate, 'Average success rate should equal to or less than min success rate');
+    test.ok(result.averageSuccessRate <= result.maxSuccessRate, 'Average success rate should equal to or less than max success rate');
     test.equal(result.testResult, false, 'Test result should be false when the winner is control data');
     test.equal(result.error, null, 'There should be no error');
 
