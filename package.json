@@ -5,9 +5,15 @@
   "dependencies": {
     "confidencejs": ">= 1.2.0"
   },
+  "devDependencies": {
+    "nodeunit": "latest"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/thii/binomjs.git"
+  },
+  "scripts": {
+    "test": "node test/run.js"
   },
   "main" : "binom.js",
   "engines": {
