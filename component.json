@@ -1,10 +1,11 @@
 {
-  "name" : "binom",
-  "description" : "Binomial distribution function",
+  "name" : "binomjs",
+  "description" : "Binomial distribution function in JavaScript",
   "dependencies" : {
+    "thii/confidence": "component"
   },
-  "main" : "index.js",
+  "main" : "binom.js",
   "scripts" : [
-    "index.js"
-  ],
+    "binom.js"
+  ]
 }
