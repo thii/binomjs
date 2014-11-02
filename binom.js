@@ -32,15 +32,15 @@
 
   var Binom = function() {}
 
-  Binom.prototype.test = function(trialsNum, successesNum, controllDataTrialsNum, controllDataSuccessesNum, confidenceRate) {
+  Binom.prototype.test = function(trialsNum, successesNum, hypothesisTrialsNum, hypothesisSuccessesNum, confidenceRate) {
     var Confidence = require('confidencejs');
     var confidence = new Confidence();
 
     confidence.addVariant({
       id: 'A',
-      name: 'Control Data',
-      conversionCount: controllDataSuccessesNum,
-      eventCount: controllDataTrialsNum
+      name: 'Hypothesis Data',
+      conversionCount: hypothesisSuccessesNum,
+      eventCount: hypothesisTrialsNum
     })
     
     confidence.addVariant({
@@ -60,7 +60,7 @@
     if (confidenceTestResult.hasWinner) {
       minSuccessRate = confidenceTestResult.confidenceInterval.min / 100;
       maxSuccessRate = confidenceTestResult.confidenceInterval.max / 100;
-      averageSuccessRate = confidenceTestResult.winnerID == 'B' ? successesNum /  trialsNum : controllDataSuccessesNum / controllDataTrialsNum;
+      averageSuccessRate = confidenceTestResult.winnerID == 'B' ? successesNum /  trialsNum : hypothesisSuccessesNum / hypothesisTrialsNum;
     } else {
       error = confidenceTestResult.readable;
     }
