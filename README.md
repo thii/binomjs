@@ -40,3 +40,6 @@ var result = binom.test(1000, 100, 1000, 50, 0.95);
 ```
 npm test
 ```
+
+## License
+[MIT](http://thi.mit-license.org/)
