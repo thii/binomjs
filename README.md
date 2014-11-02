@@ -1,4 +1,4 @@
-# binomjs
+# binomjs [![CI Status](http://img.shields.io/travis/thii/binomjs.svg?style=flat)](https://travis-ci.org/thii/binomjs)
 
 A binomial distribution testing library in JavaScript.
 
