@@ -18,7 +18,7 @@ component install thii/binomjs
 
 ## Building component
 
-- Prerequisites: `uglify-js`
+- Prerequisites: In order to build a minified version you need to have `uglify-js` installed globally.
 
 ```
 npm install uglify-js -g
@@ -27,6 +27,7 @@ npm install uglify-js -g
 - Building
 
 ```shell
+component install
 component build -n binom
 uglifyjs build/binom.js -o build/binom.min.js
 ```
@@ -54,6 +55,7 @@ var result = binom.test(1000, 100, 1000, 50, 0.95);
 ## Running Tests
 
 ```
+npm install
 npm test
 ```
 
