@@ -16,6 +16,22 @@ npm install binomjs
 component install thii/binomjs
 ```
 
+## Building component
+
+- Prerequisites: `uglify-js`
+
+```
+npm install uglify-js -g
+```
+
+- Building
+
+```shell
+component build -n binom
+uglifyjs build/binom.js -o build/binom.min.js
+```
+The built version of binomjs will be put in the `build/` subdirectory.
+
 ## Example
 
 ```javascript
@@ -35,7 +51,7 @@ var result = binom.test(1000, 100, 1000, 50, 0.95);
 
 ```
 
-## Running the Tests
+## Running Tests
 
 ```
 npm test
