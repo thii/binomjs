@@ -52,6 +52,27 @@ var result = binom.test(1000, 100, 1000, 50, 0.95);
 
 ```
 
+The above example run in R:
+
+```R
+binom.test(100, 1000, p = 0.95, alternative = c("two.sided"), conf.level = 0.95)
+```
+
+Result in R:
+
+```
+	Exact binomial test
+
+data:  100 and 1000
+number of successes = 100, number of trials = 1000, p-value < 2.2e-16
+alternative hypothesis: true probability of success is not equal to 0.95
+95 percent confidence interval:
+ 0.08210533 0.12028794
+sample estimates:
+probability of success 
+                   0.1 
+```
+
 ## Running Tests
 
 ```
