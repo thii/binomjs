@@ -2,7 +2,7 @@
   "name" : "binomjs",
   "description" : "Binomial distribution function in JavaScript",
   "dependencies" : {
-    "thii/confidence": "component"
+    "sendwithus/confidence": "*"
   },
   "main" : "binom.js",
   "scripts" : [
